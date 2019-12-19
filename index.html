@@ -6,16 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Word Guess</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>beep</h1>
+        <!-- make a nice header -->
+        <h1>Guess the Climber</h1>
     </header>
+
+    <!-- layout two columns -->
+    <div class="row">
+        <div class="col-md-1"></div>
+
+        <div id="gameField" class="col-md-4">
+            <!-- Column 1 contains the word to be guessed and any images -->
+            <div id="picBox" class="row">
+                <div id="pBHeader"></div><br>
+                <hr><br>
+                <div id="pic"></div>
+            </div>
+            <div class="row"></div>
+
+        </div>
+
+        <!-- Column 2 contains score, guesses remaining, and unused letters already guessed -->
+
+        <div id="feedBackField" class="col-md-4">
+
+
+        </div>
+
+
+        <div class="col-md-1"></div>
+    </div>
+
+
+
     <div id="test">
 
     </div>
+
+
+
+
+
+
+
+
 </body>
 
 <script src="/assets/javascript/game.js"></script>
