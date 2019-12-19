@@ -1,8 +1,6 @@
-var text = document.getElementById("test");
-text.innerHTML = "beepbloop";
-
-
 // ask user for input
+var picBoxtext = document.getElementById("pBHeader");
+pBHeader.innerHTML = "Press any key to start!";
 
 // when input is recieved, start the game
 
