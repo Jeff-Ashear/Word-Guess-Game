@@ -56,8 +56,24 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
     color: white;
+    text-align: center;
 }
 
 #pic {
     margin: 0 auto;
+    padding: 10px;
+}
+
+#gameBlanks {
+    width: 95%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    background-color: rgb(65, 67, 68);
+    margin: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    text-shadow: cornsilk 2px 2px 4px;
 }

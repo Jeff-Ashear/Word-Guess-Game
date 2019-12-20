@@ -12,17 +12,16 @@ pBHeader.innerHTML = "Press any key to start!";
 // computer picks a word randomly
 //list of possible words
 var words = [
-    "tommy",
-    "conrad",
-    "margot",
-    "angela",
-    "brad",
-    "hazel",
+    "tommy"
+    "conrad"
+    "margot"
+    "angela"
+    "brad"
+    "hazel"
 ];
 //selects one of the possible words at random
 var word = words[Math.floor(Math.random()) * words.length];
 console.log(word)
-
 
 //create an array of the same number of blank spaces as there are letters in the chosen word
 var guessMeArray = [];
@@ -37,12 +36,12 @@ var guessesLeft = 15;
 
 //begin the game loop
 
-while (remainingLtrs > 0 && guessesLeft > 0) {
+while (remainingLtrs > 0) && (guessesLeft > 0) {
     var status = document.getElementById("gameBlanks");
     status.innerHTML += (guessMeArray.join(" "));
 
-}
 
+}
 
 //computer checks to see if any more letters neeed to be guessed?
 //when a letter is pressed:

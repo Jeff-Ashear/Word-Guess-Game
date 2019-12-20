@@ -13,7 +13,7 @@
 <body>
     <header>
         <!-- make a nice header -->
-        <h1>Guess the Climber</h1>
+        <h1>Hangdogging-man</h1>
     </header>
 
     <!-- layout two columns -->
@@ -23,19 +23,21 @@
         <div id="gameField" class="col-md-4">
             <!-- Column 1 contains the word to be guessed and any images -->
             <div id="picBox" class="row">
-                <div id="pBHeader" class="row"></div><br>
-                <hr><br>
+                <div id="pBHeader" class="row"></div>
                 <div id="picBorder" class="row">
                     <img id="pic" class="image-responsive" src="assets/images/QuestionMark2.jpg">
                 </div>
             </div>
-            <div class="row"></div>
+            <div id="gameBlanks" class="row"></div>
 
         </div>
 
         <!-- Column 2 contains score, guesses remaining, and unused letters already guessed -->
 
         <div id="feedBackField" class="col-md-4">
+            <div class="row" id="score"></div>
+            <div class="row" id="guessesLeft"></div>
+            <div class="row" id="wrongLtrs"></div>
 
 
         </div>
