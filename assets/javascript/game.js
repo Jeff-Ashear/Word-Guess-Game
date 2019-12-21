@@ -13,10 +13,9 @@ pBHeader.innerHTML = "Press any key to start!";
 //list of possible words
 
 var words = [
-    "tommy",
     "conrad",
     "margot",
-    "angela",
+    "chris",
     "brad",
     "hazel",
 ];
@@ -44,6 +43,9 @@ for (var i = 0; i < word.length; i++) {
 //variable to track how many attempts remain
 
 // var guessesLeft = 15;
+
+//var to track wins
+var wins = 0
 
 //begin the game loop
 // user presses a key to and the funtion starts
@@ -76,7 +78,23 @@ document.onkeyup = function(event) {
         var letterPosition = word.indexOf(userGuess);
         console.log(letterPosition);
 
-        gameBlanks.replace(letterPosition, userGuess);
+        //a test to see if I i can change the blanks into the word
+        document.getElementById("gameBlanks").innerHTML = word;
+
+        //trying to replace only one blank with a correct guess:
+
+        // function replacer() {
+        //     var strScan = document.getElementById("gameBlanks").innerHTML;
+        //     var strReplacer = strScan.replace(letterPosition, userGuess);
+        //     document.getElementById("gameBlanks").innerHTML = strReplacer;
+        // }
+
+
+        //tyring to update the score:
+        wins = wins + 1;
+        document.getElementById("wins").innerHTML = wins;
+
+
 
     } else {
         console.log("false")
