@@ -23,19 +23,19 @@
         <div id="gameField" class="col-md-4">
             <!-- Column 1 contains the word to be guessed and any images -->
             <div id="picBox" class="row">
-                <div id="pBHeader" class="row"></div>
-                <div id="picBorder" class="row">
+                <div id="pBHeader" class="feildStyle" class="row"></div>
+                <div id="picBorder" class="feildStyle" class="row">
                     <img id="pic" class="image-responsive" src="/assets/images/QuestionMark2.jpg">
                 </div>
             </div>
-            <div id="gameBlanks" class="row">Some text</div>
+            <div id="gameBlanks" class="feildStyle" class="row">Some text</div>
 
         </div>
 
         <!-- Column 2 contains score, guesses remaining, and unused letters already guessed -->
 
         <div id="feedBackField" class="col-md-4">
-            <div id="score">
+            <div class="feildStyle" id="score">
                 <div class="row">
                     <h2>Wins: </h2>
                     <h2 id="wins"></h2>
@@ -45,8 +45,24 @@
                     <h2 id="losses"></h2>
                 </div>
             </div>
-            <div class="row" id="guessesLeft"></div>
-            <div class="row" id="wrongLtrs"></div>
+            <div class="feildStyle" id="guesses">
+                <div class="row">
+                    <h2>Guesses Remaining:</h2>
+                </div>
+                <div class="row" id="guessesLeft">
+                    <h2></h2>
+                </div>
+
+            </div>
+            <div class="feildStyle" id="lettersGuessed">
+                <div class="row">
+                    <h2>Letters Guessed:</h2>
+                </div>
+                <div class="row" id="wrongLtrs">
+                    <h2></h2>
+                </div>
+
+            </div>
 
 
         </div>

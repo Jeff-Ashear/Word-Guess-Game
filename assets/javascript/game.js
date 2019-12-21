@@ -23,10 +23,8 @@ var words = [
 
 //selects one of the possible words at random
 
-
 var word = words[Math.floor(Math.random()) * words.length];
 console.log(word)
-
 
 //create an array of the same number of blank spaces as there are letters in the chosen word
 
@@ -42,10 +40,12 @@ for (var i = 0; i < word.length; i++) {
 
 //variable to track how many attempts remain
 
-// var guessesLeft = 15;
+var guessesLeft = 15;
 
-//var to track wins
+//vars to track score
 var wins = 0
+var losses = 0
+
 
 //begin the game loop
 // user presses a key to and the funtion starts
@@ -56,6 +56,15 @@ document.onkeyup = function(event) {
 
     var picBoxtext = document.getElementById("pBHeader");
     pBHeader.innerHTML = "Can you guess the climber?";
+
+    //show score on start
+    document.getElementById("wins").innerHTML = wins;
+    document.getElementById("losses").innerHTML = losses;
+
+    //Show guesses remaining on start:
+    document.getElementById("guessesLeft").innerHTML = guessesLeft;
+
+
 
 
     //user's guess is stored as a variable.
@@ -78,7 +87,7 @@ document.onkeyup = function(event) {
         var letterPosition = word.indexOf(userGuess);
         console.log(letterPosition);
 
-        //a test to see if I i can change the blanks into the word
+        //a test to see if I  can change the blanks into the word
         document.getElementById("gameBlanks").innerHTML = word;
 
         //trying to replace only one blank with a correct guess:
@@ -98,6 +107,24 @@ document.onkeyup = function(event) {
 
     } else {
         console.log("false")
+            //count and display losses
+        losses = losses + 1;
+        document.getElementById("losses").innerHTML = losses;
+
+        //track and display remaining guesses
+        guessesLeft = guessesLeft - 1;
+        document.getElementById("guessesLeft").innerHTML = guessesLeft;
+
+        //track and display letters already guessed incorrectly
+        document.getElementById("wrongLtrs").innerHTML += userGuess += ", ";
+
+
+        //loss conditions:
+        if (guessesLeft === 0) {
+            document.getElementById("pBHeader").innerHTML = "You Lose... Try Again!";
+
+        }
+
     };
 
     // if (userGuess) = word.includes
