@@ -8,11 +8,13 @@ pBHeader.innerHTML = "Press the spacebar to start!";
 //list of possible words
 
 var words = [
+    "tommy",
     "conrad",
-    "margot",
+    "margo",
     "chris",
     "brad",
     "hazel",
+    "adam"
 ];
 
 
@@ -35,7 +37,7 @@ for (var i = 0; i < word.length; i++) {
 
 //variable to track how many attempts remain
 
-var guessesLeft = 15;
+var guessesLeft = 6;
 
 //vars to track score
 var wins = 0
@@ -81,7 +83,7 @@ document.onkeyup = function(event) {
         // if (userGuess) = word.includes
 
     } else {
-        console.log("the kehy event now is: ", event)
+        console.log("the key event now is: ", event)
         userGuess = event.key;
         console.log("word: ", word)
         console.log("isInWord", word.includes(userGuess))
@@ -97,9 +99,32 @@ document.onkeyup = function(event) {
             console.log("indices ", indices)
             console.log("guessMeArray", guessMeArray)
             document.getElementById("gameBlanks").innerHTML = guessMeArray.join(" ");
+        } else {
+            document.getElementById("wrongLtrs").innerHTML += userGuess += ", "
+                // remainingLtrs = remainingLtrs - 1;
+            guessesLeft = guessesLeft - 1;
+            console.log("guessesLeft: ", guessesLeft);
+
+            //update guesses remaining:
+            document.getElementById("guessesLeft").innerHTML = guessesLeft;
+
+            if (word[""] == guessMeArray[""]) {
+                console.log("win");
+                confirm("You Win! Try again?")
+            }
+
+            if (guessesLeft <= 0) {
+                if (confirm("You Lose... Try again?")) {
+                    losses = losses + 1;
+                    document.getElementById("losses").innerHTML = losses;
+                    guessesLeft = 6;
+                    console.log("guessesLeft: ", guessesLeft);
+                    document.getElementById("guessesLeft").innerHTML = guessesLeft;
+                } else {
+
+                }
+            }
         }
-        document.getElementById("wrongLtrs").innerHTML += userGuess += ", "
-            // remainingLtrs = remainingLtrs - 1;
     }
 
 };
@@ -162,15 +187,3 @@ document.onkeyup = function(gameLoop) {
     }
 
 }*/
-
-
-//computer checks to see if any more letters neeed to be guessed?
-//when a letter is pressed:
-//computer checks to see if it matches a letter in the word
-//computer prevents that letter from being used again
-//if it does match:
-//the matching blank is converted to display that letter
-//score goes up by one
-//if it doesn't match:
-//the letter pressed is displayed in the guessed letters
-//number of guesses is reduced by 1
