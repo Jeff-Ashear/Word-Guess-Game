@@ -108,10 +108,6 @@ document.onkeyup = function(event) {
             //update guesses remaining:
             document.getElementById("guessesLeft").innerHTML = guessesLeft;
 
-            if (word[""] == guessMeArray[""]) {
-                console.log("win");
-                confirm("You Win! Try again?")
-            }
 
             if (guessesLeft <= 0) {
                 if (confirm("You Lose... Try again?")) {
@@ -125,6 +121,13 @@ document.onkeyup = function(event) {
                 }
             }
         }
+
+        setTimeout(function() {
+            if (word === guessMeArray.join("")) {
+                console.log("win");
+                confirm("You Win! Try again?")
+            }
+        }, 1000)
     }
 
 };
