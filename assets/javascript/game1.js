@@ -17,19 +17,24 @@ var words = [
     "adam"
 ];
 
-
-//selects one of the possible words at random
-
+var guessMeArray = [];
 var word = words[Math.floor(Math.random() * words.length)];
 console.log(word)
 
-//create an array of the same number of blank spaces as there are letters in the chosen word
+//selects one of the possible words at random
+function randomName() {
 
-var guessMeArray = [];
-for (var i = 0; i < word.length; i++) {
-    guessMeArray[i] = "_";
-    console.log(guessMeArray);
-}
+    //create an array of the same number of blank spaces as there are letters in the chosen word
+    var word = words[Math.floor(Math.random() * words.length)];
+    for (var i = 0; i < word.length; i++) {
+        guessMeArray[i] = "_";
+        console.log(guessMeArray);
+    }
+};
+
+
+
+randomName()
 
 //variable to track how many letters are left to be guessed 
 
@@ -47,7 +52,7 @@ var losses = 0
 //begin the game loop
 // user presses a key to and the funtion starts
 
-document.onkeyup = function(event) {
+document.onkeyup = function start(event) {
     console.log("my event: ", event)
         // check for space to start the game.
     if (event.keyCode === 32) {
@@ -127,8 +132,10 @@ document.onkeyup = function(event) {
                 document.getElementById("wins").innerHTML = wins;
                 if (confirm("You Win! Try again?")) {
                     guessesLeft = 6;
-                    word = ("");
+                    randomName()
 
+
+                    console.log(word)
                 }
             }
         }, 1000)
