@@ -47,7 +47,7 @@ var losses = 0
 //begin the game loop
 // user presses a key to and the funtion starts
 
-document.onkeyup = function start(event) {
+document.onkeyup = function(event) {
     console.log("my event: ", event)
         // check for space to start the game.
     if (event.keyCode === 32) {
@@ -125,21 +125,9 @@ document.onkeyup = function start(event) {
                 wins = wins + 1;
                 console.log("wins: " + wins);
                 document.getElementById("wins").innerHTML = wins;
-                var againW = confirm("You Win! Try again?");
-
-                if (againW == true) {
+                if (confirm("You Win! Try again?")) {
                     guessesLeft = 6;
-                    console.log("clicked")
-                    var word = words[Math.floor(Math.random() * words.length)];
-                    console.log("word again: " + word)
-
-                    for (var i = 0; i < word.length; i++) {
-                        guessMeArray[i] = "_";
-                        console.log("guess me again: " + guessMeArray);
-                    }
-                    start()
-
-
+                    document.getElementById("#pic").src = "../images/margo.png";
 
                 }
             }
