@@ -17,25 +17,19 @@ var words = [
     "adam"
 ];
 
-var guessMeArray = [];
+
+//selects one of the possible words at random
+
 var word = words[Math.floor(Math.random() * words.length)];
 console.log(word)
 
+//create an array of the same number of blank spaces as there are letters in the chosen word
+
+var guessMeArray = [];
 for (var i = 0; i < word.length; i++) {
     guessMeArray[i] = "_";
     console.log(guessMeArray);
-    //selects one of the possible words at random
-    function randomName() {
-
-        //create an array of the same number of blank spaces as there are letters in the chosen word
-        var word = words[Math.floor(Math.random() * words.length)];
-        console.log("word in function: " + word)
-    }
-};
-
-
-
-randomName()
+}
 
 //variable to track how many letters are left to be guessed 
 
@@ -131,12 +125,22 @@ document.onkeyup = function start(event) {
                 wins = wins + 1;
                 console.log("wins: " + wins);
                 document.getElementById("wins").innerHTML = wins;
-                if (confirm("You Win! Try again?")) {
+                var againW = confirm("You Win! Try again?");
+
+                if (againW == true) {
                     guessesLeft = 6;
-                    randomName()
+                    console.log("clicked")
+                    var word = words[Math.floor(Math.random() * words.length)];
+                    console.log("word again: " + word)
+
+                    for (var i = 0; i < word.length; i++) {
+                        guessMeArray[i] = "_";
+                        console.log("guess me again: " + guessMeArray);
+                    }
+                    start()
 
 
-                    console.log(word)
+
                 }
             }
         }, 1000)
