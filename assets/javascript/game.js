@@ -33,7 +33,8 @@ for (var i = 0; i < word.length; i++) {
 
 //variable to track how many letters are left to be guessed 
 
-// var remainingLtrs = word.length;
+var remainingLtrs = word.length;
+console.log("remaining letters: ", remainingLtrs)
 
 //variable to track how many attempts remain
 
@@ -67,8 +68,9 @@ document.onkeyup = function(event) {
         //user's guess is stored as a variable.
         // while (remainingLtrs > 0 && guessesLeft > 0) {
 
-        var userGuess = event.key;
-        console.log(userGuess);
+            var userGuess = event.key;
+            console.log(userGuess);
+        
 
         //display the random name as blanks in the appropriate field when the game starts
 
@@ -88,10 +90,14 @@ document.onkeyup = function(event) {
         console.log("word: ", word)
         console.log("isInWord", word.includes(userGuess))
         if (word.includes(userGuess)) {
+            remainingLtrs = remainingLtrs - 1;
+            console.log("remaining letters: ", remainingLtrs)
+            
             let indices = [];
             for (let i = 0; i < word.length; i++) {
                 if (word[i] === userGuess)
                     indices.push(i);
+                    
             }
             for (let i = 0; i < indices.length; i++) {
                 guessMeArray[indices[i]] = word[indices[i]];
@@ -101,7 +107,7 @@ document.onkeyup = function(event) {
             document.getElementById("gameBlanks").innerHTML = guessMeArray.join(" ");
         } else {
             document.getElementById("wrongLtrs").innerHTML += userGuess += ", "
-                // remainingLtrs = remainingLtrs - 1;
+               
             guessesLeft = guessesLeft - 1;
             console.log("guessesLeft: ", guessesLeft);
 
