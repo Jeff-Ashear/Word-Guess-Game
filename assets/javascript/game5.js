@@ -7,6 +7,7 @@
     var guessMeArray = [];
     var alphaSet = [];
     var userGuess = "";
+    var remainingLtrs = 0
 
 
 //global variables related to UI changes:
@@ -38,16 +39,17 @@ console.log("alphaLocked: ", alphaLocked)
 function gameStart() {
     pBHeader.innerHTML = "Press the spacebar to start!";
     for (var i = 0; i < word.length; i++){
+        remainingLtrs = word.length
         guessMeArray[i] = "_";
         console.log(guessMeArray);
         guessesLeft = 6;
-        alphaSet = alphaLocked;
+        alphaSet = [];
         console.log("alphaLocked again: ", alphaLocked)
         console.log("alphaSet: ", alphaSet)
     }
 }
 
-document.ready(gameStart());
+gameStart();
 
 //gameloop:
 //user presses space to start the game
@@ -93,6 +95,7 @@ document.onkeyup = function(event) {
                 for (let i = 0; i < word.length; i++) {
                     if (word[i] === userGuess)
                     indices.push(i);
+                    console.log("Indices: ", indices)
                 }
                 for (let i = 0; i < indices.length; i++) {
                     guessMeArray[indices[i]] = word[indicies[i]];
@@ -100,35 +103,35 @@ document.onkeyup = function(event) {
                 console.log("indices: ", indices)
                 console.log("guessMeArray: ", guessMeAray)
                 document.getElementById("gameBlanks").innerHTML = guessMeArray.join(" ");
-                //if the user guess isn't in the word
-            } else {
-                // document.getElementById("wrongLts").innerHTML += userGuess += ", ";
+                //if the user guess isn't in the word                
+                
+            // } else if (! alphaSet.includes(userGuess)) {
+               
+            //     console.log("This letter was already incorrectly guessed: ", userGuess)
 
-                guessesLeft = guessesLeft - 1;
-                console.log("guessesLeft: ", guessesLeft);
 
-                //updates guesses remaining
-                document.getElementById("guessesLeft").innerHTML = guessesLeft;
+            // } else {
+            //     guessesLeft = guessesLeft - 1;
+            //     console.log("guessesLeft: ", guessesLeft);
 
-                //modifyable array of letters of the alphabet to filter user input
-                // var alphaSet = alphaLocked.filter(function() {
-                    
-                //     for (let i = 0; i < alphaSet.length; i++) {
-                //         if (alphaSet.includes(userGuess)) {
-                //             delete alphaSet[i]
-                //         };
-                //     }
-                // });
-                console.log("Filtered array: ", alphaSet)
+            //     //updates guesses remaining
+            //     document.getElementById("guessesLeft").innerHTML = guessesLeft;
+            //     document.getElementById("wrongLtrs").innerHTML += userGuess += ", ";
+
+            //     // modifyable array of letters of the alphabet to filter user input
+                
+            //     alphaSet.push(userGuess);
+                
+            //     console.log("Filtered array: ", alphaSet)
+
 
 
             }
           
 
-
-
         } else {
             console.log("That's not a letter: ", userGuess)
+            alert("Only letters please!")
         }
     }
     
