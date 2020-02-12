@@ -154,15 +154,20 @@ document.onkeyup = function(event) {
                 console.log("wins: " + wins);
                 document.getElementById("wins").innerHTML = wins;
                 if (confirm("You Win! Try again?")) {
-                    guessesLeft = 6;
-                    word = ("");
-                    gameStart();
+                    restart();
+                    
                 }
             }
         }, 1000)
     }
 
 };
+function restart(){
+    guessesLeft = 6;
+   document.querySelector("")
+    gameStart();
+
+}
 
 
 
