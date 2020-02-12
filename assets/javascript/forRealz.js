@@ -72,6 +72,8 @@ function gameReset() {
 }
 gameReset();
 
+//try moving gameStart outside the document function, renaming it gameSetup, and then wrapping the document function in a gameStart function maybe?
+
 //gamestart event and functions:
 document.onkeyup = function(event) {
     console.log("My event", event);
