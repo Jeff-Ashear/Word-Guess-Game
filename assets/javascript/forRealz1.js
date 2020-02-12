@@ -118,6 +118,9 @@ function gameStart() {
                         console.log("indices: ", indices);
                         console.log("guessMeArray: ", guessMeArray);
                         document.getElementById("gameBlanks").innerHTML = guessMeArray.join(" ");
+
+                     
+
                     } else if (wrongLetters.includes(userGuess)) {
                         console.log("Already guessed: ", userGuess)
                         alert("You've already tried the letter " + userGuess)
@@ -135,20 +138,28 @@ function gameStart() {
                                 console.log("restart")
                                 gameReset();
                                 gameStart();
-
                             }
                         }
-                    }
-
-
+                    }   
                 } else {
                     console.log("Not a letter.")
                     alert("Please enter only letters.")
                 }
-
-            }
+                //win conditions funtion
+                setTimeout(function() {
+                    if (word === guessMeArray.join("")) {
+                        wins = wins + 1;
+                        document.getElementById("wins").innerHTML = wins;
+                        confirm("You win");
+                        if(confirm("You win! Try again?")) {
+                            gameReset();
+                            gameSetup();
+                            gameStart();
+                        }
+                    }
+                }, 1000);
+            }   
         }
-    }
-
+    }    
 }
 gameStart();
