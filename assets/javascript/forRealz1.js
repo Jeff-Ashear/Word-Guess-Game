@@ -66,9 +66,11 @@ function gameReset() {
     console.log("The name is: ", word);
     guessesLeft = 6;
     document.getElementById("guessesLeft").innerHTML = guessesLeft;
-    pBHeader.innerHTML = "Press the spacebar to start!"
+    document.getElementById("pBHeader").innerHTML = "Press the spacebar to start!";
     document.getElementById("wrongLtrs").innerHTML = "";
     wrongLetters = "";
+    guessMeArray = [];
+    document.getElementById("gameBlanks").innerHTML = "";
 }
 gameReset();
 
