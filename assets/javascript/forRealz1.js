@@ -99,9 +99,10 @@ function gameStart() {
                 document.getElementById("wins").innerHTML = wins;
                 document.getElementById("losses").innerHTML = losses; 
                 if (word === "tommy") {
-                    document.getElementById('pic').src=""
-                }
-                if (word === "margo") {
+                    document.getElementById('pic').src="assets/images/tommy.jpg"
+                } else if (word === "conrad") {
+                    document.getElementById('pic').src="assets/images/conrad.jpg"
+                } else if (word === "margo") {
                     document.getElementById('pic').src="assets/images/margo.png"
                 }           
             }
@@ -162,13 +163,9 @@ function gameStart() {
                 if (word === guessMeArray.join("")) {
                     if (word === "tommy") {
                         document.getElementById("climberBio").innerText = "Tommy Caldwell, from Estes Park Colorado, is a master of hard, risky traditional free climbing, and big-wall free climbing.  He made first free ascents of multiple routs on El Capitan in Yosemite, most notably, the first free ascent of the Dawn Wall.  At the time the 19 day ascent was considered by some the most difficult successful rock climb in history.  He was the first to send Flex Luthor, a 5.15a route at the Fortress of Solitude in Colorado.  Interestingly, he is missing much of his left index finger."
-                    } else if (word === "") {
-
+                    } else if (word === "conrad") {
+                        document.getElementById("climberBio").innerText = "Conrad Anker, from Bozeman Montana, is a world-class climber and mountaineer.  His list of first ascents is long and storied.  Most notably perhaps is his first ascent of the Shark's Fin route on Meru Peak; one of the most difficult climbs ever accomplished by the human species.  He also discovered and recovered the body of Sir Edmund Hillary on Everest, as leader of the expedition sent to seach for it."
                     
-
-
-
-
                     } else if (word === "margo") {
                         document.getElementById("climberBio").innerText = "Margo Hayes, from Boulder Colorado, specializes in incredibly difficult sport climbing.  In 2016, she won both the Bouldering and Lead Climbing events at the World Youth Championships in Guangzhou.  On February 26, 2017, Hayes became the first woman ever to climb a route graded at 5.15a.  82 people who have ever lived have manged to climb a 5.15a route.  This picture of her is from the moment she touched ground after accomplishing this monumental achievement."
                     }
