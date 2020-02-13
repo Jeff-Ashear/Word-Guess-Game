@@ -72,6 +72,7 @@ function gameReset() {
     guessMeArray = [];
     document.getElementById("gameBlanks").innerHTML = "";
     document.getElementById("pic").src="assets/images/QuestionMark2.jpg"
+    document.getElementById("climberBio").innerText = "";
 }
 gameReset();
 
@@ -97,6 +98,9 @@ function gameStart() {
                 //show current score
                 document.getElementById("wins").innerHTML = wins;
                 document.getElementById("losses").innerHTML = losses; 
+                if (word === "tommy") {
+                    document.getElementById('pic').src=""
+                }
                 if (word === "margo") {
                     document.getElementById('pic').src="assets/images/margo.png"
                 }           
@@ -152,11 +156,28 @@ function gameStart() {
                     alert("Please enter only letters.")
                 }
                 //win conditions funtion
+                
+                
+                
+                if (word === guessMeArray.join("")) {
+                    if (word === "tommy") {
+                        document.getElementById("climberBio").innerText = "Tommy Caldwell, from Estes Park Colorado, is a master of hard, risky traditional free climbing, and big-wall free climbing.  He made first free ascents of multiple routs on El Capitan in Yosemite, most notably, the first free ascent of the Dawn Wall.  At the time the 19 day ascent was considered by some the most difficult successful rock climb in history.  He was the first to send Flex Luthor, a 5.15a route at the Fortress of Solitude in Colorado.  Interestingly, he is missing much of his left index finger."
+                    } else if (word === "") {
+
+                    
+
+
+
+
+                    } else if (word === "margo") {
+                        document.getElementById("climberBio").innerText = "Margo Hayes, from Boulder Colorado, specializes in incredibly difficult sport climbing.  In 2016, she won both the Bouldering and Lead Climbing events at the World Youth Championships in Guangzhou.  On February 26, 2017, Hayes became the first woman ever to climb a route graded at 5.15a.  82 people who have ever lived have manged to climb a 5.15a route.  This picture of her is from the moment she touched ground after accomplishing this monumental achievement."
+                    }
+                }
+                
                 setTimeout(function() {
                     if (word === guessMeArray.join("")) {
                         wins = wins + 1;
                         document.getElementById("wins").innerHTML = wins;
-                        confirm("You win");
                         if(confirm("You win! Try again?")) {
                             gameReset();
                             // gameSetup();
