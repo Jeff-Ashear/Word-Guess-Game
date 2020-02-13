@@ -71,6 +71,7 @@ function gameReset() {
     wrongLetters = "";
     guessMeArray = [];
     document.getElementById("gameBlanks").innerHTML = "";
+    document.getElementById("pic").src="assets/images/QuestionMark2.jpg"
 }
 gameReset();
 
@@ -95,7 +96,10 @@ function gameStart() {
                 status.innerHTML = (guessMeArray.join(" "));
                 //show current score
                 document.getElementById("wins").innerHTML = wins;
-                document.getElementById("losses").innerHTML = losses;            
+                document.getElementById("losses").innerHTML = losses; 
+                if (word === "margo") {
+                    document.getElementById('pic').src="assets/images/margo.png"
+                }           
             }
             gameSetup();
 
@@ -155,7 +159,7 @@ function gameStart() {
                         confirm("You win");
                         if(confirm("You win! Try again?")) {
                             gameReset();
-                            gameSetup();
+                            // gameSetup();
                             gameStart();
                         }
                     }
