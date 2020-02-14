@@ -173,7 +173,9 @@ function gameStart() {
                     } else if (word === "brad") {
                         document.getElementById("climberBio").innerText = "Brad Gobright was born in Orange County, California and lived for many years in Boulder Colorado.  In contrast to the other climbers featured here, he never really had much of a carreer.  He lived in his car working odd jobs all winter so he could climb in the spring, summer and fall for most of his adult life.   He is know for free-soloing some of the most difficult, dangerous routes in the world in locations like El Dorado Canyon, El Potrero Chico, and Yosemite.  Amusingly, his free solos have made Alex Honnold (the most famous free soloist to date) genuinely uncomfortable.  Sadly, he died in a repelling accident in Potrero on November 27, 2019."
                     }   else if (word === "hazel") {
-                        document.getElementById("climberBio").innerText = "Hazel"
+                        document.getElementById("climberBio").innerText = "Hazel Findlay, born in Pembrokeshire England, is known for sending extremely difficult, highly sketch trad routes.  She was the first female british climber to trad climb 5.14b.  She's made many first female ascents all over the globe.  Climbing magazine gave her their Golden Piton award for trad climbing in 2013.  She began climbing at the age of seven with her father and subsiquently spent several years winning indoor climbing comps.  Eventually she gave up competitive climbing to focus on trad."
+                    } else if (word === "adam") {
+                        document.getElementById("climberBio").innerText = "Adam Ondra, from Brno in the Czech Republic, specializes in extremely difficult lead climbing and bouldering.  "
                     }
                 }
                 
