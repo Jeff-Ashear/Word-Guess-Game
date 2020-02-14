@@ -104,7 +104,15 @@ function gameStart() {
                     document.getElementById('pic').src="assets/images/conrad.jpg"
                 } else if (word === "margo") {
                     document.getElementById('pic').src="assets/images/margo.png"
-                }           
+                } else if (word === "chris") {
+                    document.getElementById('pic').src="assets/images/chris.jpg"
+                } else if (word === "brad") {
+                    document.getElementById('pic').src="assets/images/brad.jpg"
+                } else if (word === "hazel") {
+                    document.getElementById('pic').src="assets/images/hazel2.jpg"
+                } else if (word === "adam") {
+                   document.getElementById('pic').src="assets/images/adam.jpg" 
+                }
             }
             gameSetup();
 
@@ -173,9 +181,9 @@ function gameStart() {
                     } else if (word === "brad") {
                         document.getElementById("climberBio").innerText = "Brad Gobright was born in Orange County, California and lived for many years in Boulder Colorado.  In contrast to the other climbers featured here, he never really had much of a carreer.  He lived in his car working odd jobs all winter so he could climb in the spring, summer and fall for most of his adult life.   He is know for free-soloing some of the most difficult, dangerous routes in the world in locations like El Dorado Canyon, El Potrero Chico, and Yosemite.  Amusingly, his free solos have made Alex Honnold (the most famous free soloist to date) genuinely uncomfortable.  Sadly, he died in a repelling accident in Potrero on November 27, 2019."
                     }   else if (word === "hazel") {
-                        document.getElementById("climberBio").innerText = "Hazel Findlay, born in Pembrokeshire England, is known for sending extremely difficult, highly sketch trad routes.  She was the first female british climber to trad climb 5.14b.  She's made many first female ascents all over the globe.  Climbing magazine gave her their Golden Piton award for trad climbing in 2013.  She began climbing at the age of seven with her father and subsiquently spent several years winning indoor climbing comps.  Eventually she gave up competitive climbing to focus on trad."
+                        document.getElementById("climberBio").innerText = "Hazel Findlay, born in Pembrokeshire England, is known for sending extremely difficult, highly sketchy trad routes.  She was the first female british climber to trad climb 5.14b.  She's made many first female ascents all over the globe.  Climbing magazine gave her their Golden Piton award for trad climbing in 2013.  She began climbing at the age of seven with her father and subsiquently spent several years winning indoor climbing comps.  Eventually she gave up competitive climbing to focus on trad."
                     } else if (word === "adam") {
-                        document.getElementById("climberBio").innerText = "Adam Ondra, from Brno in the Czech Republic, specializes in extremely difficult lead climbing and bouldering.  "
+                        document.getElementById("climberBio").innerText = "Adam Ondra, from Brno in the Czech Republic, specializes in extremely difficult lead climbing and bouldering; and is the only male ever to have won World Championship titles in both disciplines in the same year(2014), as well as both World Cup titles (though in different years).  He climbed his first route graded 5.14d at age 13.  As of November 2018, Ondra had climbed 1,550 routes graded between 5.13b and 5.15d.  He is the frist climber ever to have redpointed a routes graded 5.15c as well as 5.15d.  He is also the first comber to flash a 5.15a.  He may be the climber with the largest number of the hardest known routes in the world in the bag.  As of January of 2020, Ondra is the only person who has ever lived to climb a route graded 5.15d."
                     }
                 }
                 
