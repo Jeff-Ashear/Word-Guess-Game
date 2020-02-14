@@ -13,76 +13,97 @@
 <body>
     <header>
         <!-- make a nice header -->
-        <h1>Hangdogging-man</h1>
+        <h1>Spoilers!!!</h1>
     </header>
 
-    <!-- layout two columns -->
+    <!-- collapsing notes for people who just want to check out the code functionality and don't care about climbing -->
     <div class="row">
-        <div class="col-md-1"></div>
-
-        <div id="gameField" class="col-md-4">
-            <!-- Column 1 contains the word to be guessed and any images -->
-            <div id="picBox" class="row">
-                <div id="pBHeader" class="feildStyle" class="row"></div>
-                <div id="picBorder" class="feildStyle" class="row">
-                    <img id="pic" class="image-responsive" src="assets/images/QuestionMark2.jpg">
+      
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                   Here you'll find the answers...
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="This accordian contains spoilers!" data-parent="#accordionExample">
+                <div class="card-body">Opening the second card will reveal the possible answers for the game, while the last card has some definitions of climbing lingo if you find yourself interested in that.  Thanks for looking!
+                
                 </div>
+              </div>
             </div>
-            <div id="gameBlanks" class="feildStyle" class="row">Some text</div>
-
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                   List of possible answers.
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    The possible names that the program will recognize are: Tommy, Conrad, Margo, Chris, Hazel, Brad, and Adam.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Climbing difficulty grading system:
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                 A note about difficulty grading:
+                <br>
+                A route's difficulty level is graded on a scale.  In the US we use the YDS (Yosemite Decimal System), and grades look like this 5.12b.  The 5 defines the class of movemtent.  Class one movement is walking on a flat, level, artificial surface like flooring.  Class 5 movement is vertical surface.  All grades start with the 5.  After the decimal you have numbers from 0 to (at present) 15, 0 being the easiest and 15 being the most difficult.  Each ascending difference is greater in difficulty than the last; for example the difference in difficult between 5.9 and 5.10 is much greater than the difference between 5.7 and 5.8.  Because of this at 5.10 and above there are subdivisions in the rating.  In order of easiest to most difficult the subdivisions go:<br>
+                5.10-, 5.10a, 5.10b, 5.10, 5.10c, 5.10d, 5.10+ <br>
+                The same subdivisions are currently sufficient for 5.11, 5.12, 5.13, 5.14, and 5.15.  The hardest possible climbs in the world are currently 5.15d and I am aware of 2.  Only one person who has ever lived has finished a 5.15d, Adam Ondra.  Most people who are able to climb 5.13 are sponsored or professional climbers.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                 Climbing lingo from the game demysitified:
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+               Route: A route is basically like a vertical pathway, high enough that one would most likely use a rope to prevent a ground fall.
+              <br><br>
+              Bouldering: a category of climbing in which one climbs short, usually quite challenging problems close to the ground.  It unsurprisingly most often occurs on acutal boulders.
+              <br><br>
+              Lead climbing: when I climber ascends above their protection, trailing the rope behind them and clipping it to protection(which is either installed in the rockm, or carried and placed in the rock by the leader).
+              <br><br>
+              Sport climbing: sport routes are predefined by a vertical pathway of bolts which have been drilled into the rock.  The lead climber clips a carabiner to the bolt, and then clips the rope to the carabiner.
+              <br><br>
+              Trad climbing: (or traditional climbing) is much, much trickier than sport climbing.  The leader places protection (cams, nuts, etc) into weaknesses in the rock as the climb, clipping to the protecion behind them.  It requires much study and is as much art as it is science.  It also require much more strength and endurance to rummage through a wad of gear clipped to your harness, find the right piece, and place it well enough to catch you if you fall; all while holding on with one hand.  Typically there is a two-grade reduction between sport and trad: meaning if you can lead 5.10's sport climbing, you can probably trad lead 5.8's.
+              Send (or sending): When you succesfully complete a route.
+              <br><br>
+              Redpoint (or redpointing): Succesefully finishing a route without weighting the rope, by either falling or resting by hanging from the rope, but it's either not your first attempt or someone has explained how to finish that route to you.
+              <br><br>
+              Flash: Successfully finishing a route without weighting the rope, cleanly on your first try, with no advice from outside sources.
+              <br><br>
+              Free climbing:  When you don't climb aid pieces.  You are protected by a rope, but you're using only the rock itself to move upwards.
+              <br><br>
+              Free-soloing:  When you don't use protection at all.  Soloists spend huge amounts of time rehearsing a route with protection.  Then when they're ready, the clean the route very carefully before climbing it without ropes.
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Column 2 contains score, guesses remaining, and unused letters already guessed -->
-
-        <div id="feedBackField" class="col-md-4">
-            <div class="feildStyle" id="score">
-                <div class="row">
-                    <h2>Wins: </h2>
-                    <h2 id="wins"></h2>
-                </div>
-                <div class="row">
-                    <h2>Losses: </h2>
-                    <h2 id="losses"></h2>
-                </div>
-            </div>
-            <div class="feildStyle" id="guesses">
-                <div class="row">
-                    <h2>Guesses Remaining:</h2>
-                </div>
-                <div class="row" id="guessesLeft">
-                    <h2></h2>
-                </div>
-            </div>
-            <div class="feildStyle" id="lettersGuessed">
-                <div class="row">
-                    <h2>Letters Guessed:</h2>
-                </div>
-                <div class="row" id="wrongLtrs">
-                    <h2></h2>
-                </div>
-            </div>
-            <div>
-                <div class="fieldStyle">
-                    <p id="climberBio"></p>
-                </div>
-
-                </div>
-            </div>
-
-
-        </div>
-
-
-        <div class="col-md-1"></div>
     </div>
+       
 
-
-
-    <div id="test">
-
-    </div>
-
-    <footer class="footer">Don't know much about climbing?</footer>
 </body>
 
 <script src="/assets/javascript/forRealz1.js"></script>
