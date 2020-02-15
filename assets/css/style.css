@@ -75,3 +75,11 @@ body {
 #spoilersPage {
     color: coral;
 }
+
+.accordion {
+    text-align: center;
+}
+
+.accordion.width {
+    display: flex;
+}
