@@ -71,7 +71,7 @@ function gameReset() {
     wrongLetters = "";
     guessMeArray = [];
     document.getElementById("gameBlanks").innerHTML = "";
-    document.getElementById("pic").src="assets/images/QuestionMark2.jpg"
+    document.getElementById("pic").src="./assets/images/QuestionMark2.jpg"
     document.getElementById("climberBio").innerText = "";
 }
 gameReset();
