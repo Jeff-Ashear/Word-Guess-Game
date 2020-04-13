@@ -12,7 +12,7 @@ header {
 }
 
 body {
-    background-image: url("/assets/images/bgRock.jpg");
+    background-image: url("../images/bgRock.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }

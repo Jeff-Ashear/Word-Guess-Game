@@ -99,19 +99,19 @@ function gameStart() {
                 document.getElementById("wins").innerHTML = wins;
                 document.getElementById("losses").innerHTML = losses; 
                 if (word === "tommy") {
-                    document.getElementById('pic').src="assets/images/tommy.jpg"
+                    document.getElementById('pic').src="../images/tommy.jpg"
                 } else if (word === "conrad") {
-                    document.getElementById('pic').src="assets/images/conrad.jpg"
+                    document.getElementById('pic').src="../images/conrad.jpg"
                 } else if (word === "margo") {
-                    document.getElementById('pic').src="assets/images/margo.png"
+                    document.getElementById('pic').src="../images/margo.png"
                 } else if (word === "chris") {
-                    document.getElementById('pic').src="assets/images/chris.jpg"
+                    document.getElementById('pic').src="../images/chris.jpg"
                 } else if (word === "brad") {
-                    document.getElementById('pic').src="assets/images/brad.jpg"
+                    document.getElementById('pic').src="../images/brad.jpg"
                 } else if (word === "hazel") {
-                    document.getElementById('pic').src="assets/images/hazel2.jpg"
+                    document.getElementById('pic').src="../images/hazel2.jpg"
                 } else if (word === "adam") {
-                   document.getElementById('pic').src="assets/images/adam.jpg" 
+                   document.getElementById('pic').src="../images/adam.jpg" 
                 }
             }
             gameSetup();
