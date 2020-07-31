@@ -1,7 +1,20 @@
-# Word-Guess-Game
+# Thank you for looking at Climber Hangman!
+A word guess game to demonstrate facility with array sorting and modification.
+
+My portfolio:
+
+		https://tinyurl.com/jeff-ashear-portfolio
 
 
-	*Please note that there is a footer containing a link to a cheat sheet for those who are interested in the assessing the  function of the code and not interested in the climbing nerdisms.  If you are interested in the climbing nerdisms, but don’t know about climbing, there are also brief descriptions of the terms and concepts that are referenced in the reward text.
+*Please note:
+
+	 that there is a footer containing a link to a cheat sheet for those who are interested in the assessing the  function of the code and not interested in the climbing nerdisms.  If you are interested in the climbing nerdisms, but don’t know about climbing, there are also brief descriptions of the terms and concepts that are referenced in the reward text.
+
+Relevant links:
+
+	
+
+![Welcome](./assets/images/Wordguess.JPG)
 
 	This assignment was very difficult for me to get all the pieces that I wanted to function together without breaking each other.  After multiple complete re-codings, I arrived at the following goals for the app:
 -Modularized functions that work independently and can be called at the right points in in the game-state.
