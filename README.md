@@ -28,24 +28,35 @@ Relevant links:
 
 
 2. How the app is organized:
-The entire game happens on the index.html page.  A cheat sheet and some climbing vocab definitions are located on the cheatSheet.html page.
-All the game logic happens in gameLogic.js.
-Upon page load, the DOM waits for the user to press the space bar through an onKeyup event function, checked with an if statement.
-Once the game begins, a word is chosen at random from the “words” array.  The chosen climber’s name is then looped, and a new array is created with an underscore for each letter in the string.  The underscores are displayed on the page with a picture of the climber who’s name was picked.
-If there are guesses remaining, and there are underscores that haven’t been replaced in the new array (explanation to follow), then the DOM will listen for onKeyup events and filter for only letters a-z.
-If the letter guessed is in the word:
-The user’s guess is replaces any underscore in the underscore array with the guessed letter at the same indices at that position in the string of the chosen word.
-The view is updated with the letters which replaced the underscore.
-The filter will now prevent that letter from being guessed again.
-If the letter guess is not in the word:
-The number of guesses remaining is reduced by 1.
-The incorrect letter guessed is added to a new array, and the array is displayed on the screen.
-The filter for keys pressed will now prevent that letter from being guessed again.
-If the number of remaining guesses reaches 0, the game ends, losses is increased by one, and the filter begins listening for the space bar to reset the game.
-If the array of underscores comes to match the string:
-Wins is increased by 1.
-A reward screen appears with a brief bio of the climber who’s name was guessed. 
-The game then begins listening for the spacebar again to reset and choose a new word.
+
+		The entire game happens on the index.html page.  A cheat sheet and some climbing vocab definitions are located on the cheatSheet.html page.
+		All the game logic happens in gameLogic.js.
+
+		Upon page load, the DOM waits for the user to press the space bar through an onKeyup event function, checked with an if statement.
+
+		Once the game begins, a word is chosen at random from the “words” array.  The chosen climber’s name is then looped, and a new array is created with an underscore for each letter in the string.  The underscores are displayed on the page with a picture of the climber who’s name was picked.
+
+		If there are guesses remaining, and there are underscores that haven’t been replaced in the new array (explanation to follow), then the DOM will listen for onKeyup events and filter for only letters a-z.
+
+		If the letter guessed is in the word:
+
+			The user’s guess is replaces any underscore in the underscore array with the guessed letter at the same indices at that position in the string of the chosen word.
+			The view is updated with the letters which replaced the underscore.
+			The filter will now prevent that letter from being guessed again.
+
+		If the letter guess is not in the word:
+
+			The number of guesses remaining is reduced by 1.
+			The incorrect letter guessed is added to a new array, and the array is displayed on the screen.
+			The filter for keys pressed will now prevent that letter from being guessed again.
+
+		If the number of remaining guesses reaches 0, the game ends, losses is increased by one, and the filter begins listening for the space bar to reset the game.
+
+		If the array of underscores comes to match the string:
+			
+			Wins is increased by 1.
+			A reward screen appears with a brief bio of the climber who’s name was guessed. 
+			The game then begins listening for the spacebar again to reset and choose a new word.
 
 3.  Instructions for using this app:
 Download or clone the repo from the link above or in section 5.
