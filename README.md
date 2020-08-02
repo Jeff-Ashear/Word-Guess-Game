@@ -3,7 +3,7 @@ A word guess game to demonstrate facility with array sorting and modification.
 
 My portfolio:
 
-		https://tinyurl.com/jeff-ashear-portfolio
+		https://tinyurl.com/jeffashear
 
 
 *Please note:
